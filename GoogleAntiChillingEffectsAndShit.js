@@ -20,10 +20,8 @@ $(document).ready(function() {
           type: "GET",
           url: url,
           success: function(data) {
-            //alert($(data).find('.infringing-urls'));
             $(data).find('.infringing_url').each(function(idx,content) {
               $('#streams').append($('<a href="'+$(content).html()+'">'+$(content).html()+'</a><br/>'));
-              //alert(content);
             });
             var dataObj = $(data).find('.infringing-urls');
           }
